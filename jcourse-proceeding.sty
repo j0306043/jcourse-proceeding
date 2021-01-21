@@ -2,7 +2,7 @@
 %%% forked from the original graduation.cls by N. Nakaya:
 %%% http://www.mn.cis.iwate-u.ac.jp/~nakaya/graduation/
 %%%
-%%% Time-stamp: <2021-01-21 22:13:40 hirayama>
+%%% Time-stamp: <2021-01-21 22:47:44 hirayama>
 
 %%% 使い方: LaTeX本文中で
 %%% \usepackage{jcourse-proceeding}
@@ -94,7 +94,6 @@
 %% ・\jcpsubtitle, \jcpunderauthorによる付加情報をタイトル領域に追加した。
 %% ・ぶちぬきアブストラクトを追加した。
 %% ・'\date'は無視するようにした。
-\newcommand{\@jcpnumber}{}
 \def\@maketitle{%
   \begin{flushleft}%
   {\Large\textbf{\@jcpnumber}}%
@@ -120,6 +119,7 @@
 %%
 %% ページ番号を変更(発表番号がある場合にその番号を付加するため)
 %%
+\newcommand{\@jcpnumber}{}
 \newcommand{\jcpnumber}[1]{
 \ifx&#1& % #1 is empty?
 \else
