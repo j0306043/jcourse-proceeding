@@ -2,7 +2,7 @@
 %%% forked from the original graduation.cls by N. Nakaya:
 %%% http://www.mn.cis.iwate-u.ac.jp/~nakaya/graduation/
 %%%
-%%% Time-stamp: <2021-01-21 18:57:43 hirayama>
+%%% Time-stamp: <2021-01-21 18:59:32 hirayama>
 
 %%% 使い方: LaTeX本文中で
 %%% \usepackage{jcourse-proceeding}
@@ -22,17 +22,15 @@
 \ProvidesPackage{jcourse-proceeding}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% 用紙の余白の設定（上下 20mm，綴じ側 25mm，小口側（綴じ側の逆） 15mm）
-%% 両面印刷して左綴じにすることを想定しているため，奇数ページと偶数ページ
-%% でレイアウトを変える必要があり、twosideを指定している．
+%% 用紙の余白の設定（上下 20mm，左右15mm）
 \@ifundefined{setpagelayout}%% BXjsclsが未読み込みか
 {
 %% geometryパッケージを呼んで、余白を設定する
-\usepackage[top=20truemm,bottom=20truemm,left=15truemm,right=15truemm,footskip=10truemm,twoside]{geometry}
+\usepackage[top=20truemm,bottom=20truemm,left=15truemm,right=15truemm,footskip=10truemm]{geometry}
 }
 {
 %% BXjsclsのやり方で、余白を設定する
-\setpagelayout*{top=20truemm,bottom=20truemm,left=15truemm,right=15truemm,footskip=10truemm,twoside}
+\setpagelayout*{top=20truemm,bottom=20truemm,left=15truemm,right=15truemm,footskip=10truemm}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
