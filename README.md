@@ -3,7 +3,7 @@
 卒業研究報告予稿集用の原稿執筆のためのLaTeXスタイルファイルです。
 
 This is a forked project from `graduation.cls` by N. Nakaya:
-[[http://www.mn.cis.iwate-u.ac.jp/~nakaya/graduation/]]
+http://www.mn.cis.iwate-u.ac.jp/~nakaya/graduation/
 
 # ファイルの概要
 
