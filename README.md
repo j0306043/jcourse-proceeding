@@ -1,0 +1,2 @@
+# jcourse-proceeding
+情報コース卒業研究報告予稿集用LaTeXスタイルファイル
