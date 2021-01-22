@@ -40,7 +40,7 @@
   ```
   \documentclass[autodetect-engine,dvi=dvipdfmx,ja=standard,twocolumn,jbase=13.35Q]{bxjsarticle}
   ```
-  - jsarticle使用の場合(非推奨): pLaTeX+dvipdfmxの人でどうしてもjsarticleにしなければならない場合、下記のように`\documentclass`を宣言することで従来のjsarticleでも行けると思いますが、推奨しません。英語のみの論文であれば、article(jsなし)でも大丈夫です。
+  - jsarticle使用の場合(非推奨): pLaTeX+dvipdfmxの人でどうしてもjsarticleにしなければならない場合、下記のように`\documentclass`を宣言することで従来のjsarticleでも行けると思いますが、推奨しません。英語のみの予稿であれば、article(jsなし)でも大丈夫です。
   ```
   \documentclass[twocolumn]{jsarticle}
   ```
