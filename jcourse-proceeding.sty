@@ -2,7 +2,7 @@
 %%% forked from the original graduation.cls by N. Nakaya:
 %%% http://www.mn.cis.iwate-u.ac.jp/~nakaya/graduation/
 %%%
-%%% Time-stamp: <2021-01-22 12:57:52 hirayama>
+%%% Time-stamp: <2021-01-22 13:01:37 hirayama>
 
 %%% 使い方: LaTeX本文中で
 %%% \usepackage{jcourse-proceeding}
@@ -119,13 +119,11 @@
 %%
 %% ページ番号を変更(発表番号がある場合にその番号を付加するため)
 %%
-\newlength{\@jcpnumberheight}\settoheight{\@jcpnumberheight}{0pt}
 \newcommand{\@jcpnumber}{}
 \newcommand{\jcpnumber}[1]{
 \ifx&#1& % #1 is empty?
 \else
   \renewcommand{\@jcpnumber}{#1}
-  \settoheight{\@jcpnumberheight}{\@jcpnumber}
   \renewcommand{\thepage}{{#1}--\arabic{page}}%
 \fi
 }
