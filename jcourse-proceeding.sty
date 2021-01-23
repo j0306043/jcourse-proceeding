@@ -1,5 +1,5 @@
-%%% 卒業研究報告予稿集用マクロ
-%%% Time-stamp: <2021-01-22 13:13:31 hirayama>
+%%% 卒業研究報告予稿集用スタイルファイル
+%%% Time-stamp: <2021-01-23 09:47:01 hirayama>
 %%% The official site is the GitHub repository:
 %%% https://github.com/j0306043/jcourse-proceeding
 %%% It is forked from the original graduation.cls by N. Nakaya:
@@ -24,6 +24,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 用紙の余白の設定（上下20mm、左右15mm）
+
 \@ifundefined{setpagelayout}%% BXjsclsが未読み込みか
 {
 %% geometryパッケージを呼んで、余白を設定する
@@ -35,7 +36,7 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% タイトルページ
+%% タイトル領域
 
 %% 2段組みにおいて、アブストラクトは1段ぶちぬきにする。
 \newcommand{\@jcpabstract}{}
@@ -117,9 +118,10 @@
   \@jcpabstract
 }
 
-%%
-%% ページ番号を変更(発表番号がある場合にその番号を付加するため)
-%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ページ番号を変更
+
+%% 発表番号がある場合にその番号を付加する
 \newcommand{\@jcpnumber}{}
 \newcommand{\jcpnumber}[1]{
 \ifx&#1& % #1 is empty?
