@@ -9,7 +9,9 @@
 \usepackage{graphicx}
 \usepackage{amssymb,amsmath}
 \usepackage{url}
-%%本文と数式のフォントをTimes(注:New Romanではない)互換フォントにする。
+%% 本文と数式のフォントをTimes(注:New Romanではない)互換フォントにする。
+%% AMS(数学)関係のパッケージのusepackageよりも後に置くこと。(前に置くと、
+%% AMS関係のパッケージをusepackageしたところでエラーになるので注意)
 \usepackage{newtxtext,newtxmath}
 %% PDFのメタデータにTitleとAuthorを入れる。
 \usepackage[pdfusetitle]{hyperref}
