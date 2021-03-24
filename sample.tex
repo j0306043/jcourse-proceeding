@@ -12,7 +12,8 @@
 %% 本文と数式のフォントをTimes(注:New Romanではない)互換フォントにする。
 %% AMS(数学)関係のパッケージのusepackageよりも後に置くこと。(前に置くと、
 %% AMS関係のパッケージをusepackageしたところでエラーになるので注意)
-\usepackage{newtxtext,newtxmath}
+\usepackage{newtxtext}
+\usepackage[varg]{newtxmath}
 %% PDFのメタデータにTitleとAuthorを入れる。
 \usepackage[pdfusetitle]{hyperref}
 %% 行間を詰める。
@@ -161,9 +162,14 @@ bxjsarticleクラスのオプションである。
 
 本文と数式のフォントをTimes互換フォントにしたいときは、
 \begin{verbatim}
-\usepackage{newtxtext,newtxmath}
+\usepackage{newtxtext}
+\usepackage[varg]{newtxmath}
 \end{verbatim}
 をプリアンブルに入れる。
+オプションの「\texttt{varg}」は、数式のgのフォントを数学で伝統的な$g$にする。
+\textit{g}との違いに注意。
+なお、これらのusepackageの宣言は、AMS(数学)関係のパッケージのusepackageよりも後に置くこと。
+前に置くと、AMS関係のパッケージをusepackageしたところでエラーになるので注意。
 
 itemize, enumerate, description環境に追加される行間をなくすには、
 \begin{verbatim}
