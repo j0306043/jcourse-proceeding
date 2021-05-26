@@ -1,5 +1,5 @@
 %%% 卒業研究報告予稿集用スタイルファイル
-%%% Time-stamp: <2021-05-26 18:04:11 hirayama>
+%%% Time-stamp: <2021-05-26 18:23:58 hirayama>
 %%% The official site is the GitHub repository:
 %%% https://github.com/j0306043/jcourse-proceeding
 %%% It is forked from the original graduation.cls by N. Nakaya:
@@ -64,7 +64,7 @@
 %% タイトルの下のサブタイトル
 \newcommand{\@jcpsubtitle}{}
 \newcommand{\jcpsubtitle}[1]{
-  \renewcommand{\@jcpsubtitle}{#1}
+  \renewcommand{\@jcpsubtitle}{\rule{0pt}{1.2em}#1}
 }
 
 %% 著者の所属研究室
@@ -103,7 +103,6 @@
   \centering
   \let\footnote\thanks
     {\LARGE\textbf{\@title}\par}%
-    \smallskip%
     {\large\textbf{\@jcpsubtitle}\par}%
     \vskip 1.0em%
     {\large
