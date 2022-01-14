@@ -1,6 +1,7 @@
 # 情報コース卒業研究報告予稿集用LaTeXスタイルファイル
 
 卒業研究報告予稿集用の原稿執筆のためのLaTeXスタイルファイルです。
+LaTeXエンジンとしては、LuaLaTeXを推奨します。
 
 # ファイルの概要
 
@@ -36,7 +37,7 @@
 - 自分の発表番号を、1ページ目の左肩につけることになっているので、それに対応しています。ページ番号にも発表番号が付加されます。
 - 対応するTeXのバージョンとしては、TeX Live 2020以降をお使いください。動作確認は、TeX Live 2020で行っています。TeX Live 2019でも動くと思いますが、動作確認していません。これよりも古いLaTeXでは動くかどうかわかりません。
 - `\documentclass`のクラスファイルには日本語用に注意深く作られたbxjsarticleを使用することを想定しています。
-  - bxjsarticle使用の場合(推奨): 下記のように、`\documentclass`のオプションのLaTeXエンジン指定に`autodetect-engine`を指定しておけば、LaTeXエンジンが自動判定され、pLaTeX+dvipdfmx, LuaLaTeX, XeLaTeX, pdfLaTeXどれでも行けると思います。補足ですが、`jbase=13.35Q`は和文フォントサイズを9.5ptにする指定です。おおよそ和文フォントの単位(Q:級)では、13.35Q=9.5ptです。
+  - bxjsarticle使用の場合(推奨): 下記のように、`\documentclass`のオプションのLaTeXエンジン指定に`autodetect-engine`を指定しておけば、LaTeXエンジンが自動判定され、pLaTeX+dvipdfmx, LuaLaTeX, XeLaTeX, pdfLaTeXどれでも行けると思います(が、LuaLaTeXを推奨します)。補足ですが、`jbase=13.35Q`は和文フォントサイズを9.5ptにする指定です。おおよそ和文フォントの単位(Q:級)では、13.35Q=9.5ptです。
   ```
   \documentclass[autodetect-engine,dvi=dvipdfmx,ja=standard,twocolumn,jbase=13.35Q]{bxjsarticle}
   ```
