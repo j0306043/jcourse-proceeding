@@ -1,5 +1,5 @@
 %%% 卒業研究報告予稿集用スタイルファイル
-%%% Time-stamp: <2021-05-26 18:23:58 hirayama>
+%%% Time-stamp: <2022-02-21 16:06:38 hirayama>
 %%% The official site is the GitHub repository:
 %%% https://github.com/j0306043/jcourse-proceeding
 %%% It is forked from the original graduation.cls by N. Nakaya:
@@ -11,7 +11,7 @@
 %%% LaTeX本文中で、下記のパラメタを設定すること。
 %%% エラーにならずにコンパイルされるという意味では、\titleのみ必須で、他は任意です。
 %%%
-%%% \jcpnumber{A--2--1} % 発表番号
+%%% \jcpnumber{A-2-1} % 発表番号
 %%% \title{論文の題目} % 論文の題目
 %%% \jcpsubtitle{副題など、太字の付加情報} % 副題など
 %%% \author{岩手　太郎} % 氏名
@@ -97,7 +97,7 @@
 %% ・\dateは無視するようにした。
 \def\@maketitle{%
   \begin{flushleft}%
-  \raisebox{0pt}[0pt][0pt]{\Large\textbf{\@jcpnumber}}%
+  \raisebox{0pt}[0pt][0pt]{\Large\textbf{\thejcpnumber}}%
   \end{flushleft}%
   \vspace{-1.2em}
   \centering
@@ -121,12 +121,12 @@
 %% ページ番号を変更
 
 %% 発表番号がある場合にその番号を付加する
-\newcommand{\@jcpnumber}{}
+\newcommand{\thejcpnumber}{}
 \newcommand{\jcpnumber}[1]{
 \ifx&#1& % #1 is empty?
 \else
-  \renewcommand{\@jcpnumber}{#1}
-  \renewcommand{\thepage}{{#1}--\arabic{page}}%
+  \renewcommand{\thejcpnumber}{#1}
+  \renewcommand{\thepage}{{#1}-\arabic{page}}%
 \fi
 }
 
