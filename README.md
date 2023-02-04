@@ -21,7 +21,7 @@ LaTeXエンジンとしては、LuaLaTeXを推奨します。
 
 - 発表に関するパラメタを設定します。
 ```
-\jcpnumber{A--2--1} % 発表番号
+\jcpnumber{A-2-1} % 発表番号
 \title{〇〇に関する研究} % 卒業研究の題目
 \author{岩手　太郎} % 発表者氏名
 \jcplaboratory{（岩手研究室）} % 研究室名
