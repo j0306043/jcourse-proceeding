@@ -8,7 +8,8 @@
 \usepackage{latexsym}
 \usepackage{graphicx}
 \usepackage{amssymb,amsmath}
-\usepackage{url}
+\usepackage{url} % for the `\url' command.
+\usepackage{bxtexlogo}\bxtexlogoimport{*} % for the \LuaLaTeX, \pdfLaTeX, \XeLeTeX commands.
 %% 本文と数式のフォントをTimes(注:New Romanではない)互換フォントにする。
 %% AMS(数学)関係のパッケージのusepackageよりも後に置くこと。(前に置くと、
 %% AMS関係のパッケージをusepackageしたところでエラーになるので注意)
@@ -82,10 +83,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %p{\LaTeX}ユーザは、従来のクラスファイル\cite{oldclass}が使える。
-本スタイルファイルは、p{\LaTeX}以外の{\LaTeX}エンジン（{pdf\LaTeX},
-{Xe\LaTeX}, {Lua\LaTeX}等の）ユーザを対象に設計したものである。
-サポート外(obsolete)であるが、p{\LaTeX}でも一応動作する。
-推奨エンジンは{Lua\LaTeX}とする。
+本スタイルファイルは、{\pLaTeX}以外の{\LaTeX}エンジン（{\pdfLaTeX},
+{\XeLaTeX}, {\LuaLaTeX}等の）ユーザを対象に設計したものである。
+サポート外(obsolete)であるが、{\pLaTeX}でも一応動作する。
+推奨エンジンは{\LuaLaTeX}とする。
 
 \subsection{documentclassのオプション}
 本稿ソースsample.texの冒頭の\verb+\documentclass+で指定しているオプショ
@@ -96,7 +97,7 @@ bxjsarticleクラスのオプションである。
 \begin{description}
 \item[autodetect-engine] これを設定しておくと、{\LaTeX}エンジンが自動
 判定され、{\LaTeX}エンジンごとに異なる設定がある程度自動化される。
-\item[dvi=dvipdfmx] p{\LaTeX}用の設定。p{\LaTeX}を使わないのであれば、
+\item[dvi=dvipdfmx] {\pLaTeX}用の設定。{\pLaTeX}を使わないのであれば、
 削除して構わない。
 \item[ja=standard] 日本語に関して、標準的な設定にする。
 \item[twocolumn] 二段組にする。
@@ -184,12 +185,7 @@ itemsep=0pt}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{むすび}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-本稿では卒業研究報告予稿集原稿のフォーマット、および予稿集原稿用
-{\LaTeX}スタイルファイル（jcource-proceeding.sty）の使用法を簡単に述べ
-た。なお、予稿集原稿はフォーマットさえ守られていれば、どのワープロソフ
-ト（Microsoft Word等）を用いて作成してもかまわない。また、{\LaTeX}で作
-成する場合でも、必ずしも本スタイルファイルを利用する必要はない（が、本
-スタイルファイルを利用するのが手軽である）。
+本稿では卒業研究報告予稿集原稿のフォーマット、および予稿集原稿用{\LaTeX}スタイルファイル（jcource-proceeding.sty）の使用法を簡単に述べた。なお、予稿集原稿はフォーマットさえ守られていれば、どのワープロソフト（Microsoft Word、LibreOffice Writer等）を用いて作成してもかまわない。また、{\LaTeX}で作成する場合でも、必ずしも本スタイルファイルを利用する必要はない（が、本スタイルファイルを利用するのが手軽である）。
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % References
@@ -198,10 +194,10 @@ itemsep=0pt}
 \begin{thebibliography}{9}% more than 9 --> 99 / less than 10 --> 9
 % \bibitem{oldclass}
 % 卒業研究発表会サイト, 
-% 従来の卒業研究報告予稿集用クラスファイル（p{\LaTeX}専用）, 
+% 従来の卒業研究報告予稿集用クラスファイル（{\pLaTeX}専用）, 
 % \url{https://blue0.an.cis.iwate-u.ac.jp/WebSite/Misc/Graduation/format.html}
 \bibitem{OkuKuro}
-奥村晴彦, 黒木裕介, {\LaTeXe}美文書作成入門, 技術評論社, （数年に一度改定される）
+奥村晴彦, 黒木裕介, {\LaTeX}美文書作成入門, 技術評論社, （数年に一度改定される）
 \bibitem{texwiki}
 日本語{\TeX}開発コミュニティ, {\TeX} Wiki, \url{https://texwiki.texjp.org/}
 \end{thebibliography}
